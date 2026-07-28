@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMW / MINI Battery Tracking</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>BMW / MINI Battery Tracking</h1></header>
+<main>
+<section class="cards">
+<div class="card"><h2>Toplam Araç</h2><span id="count">0</span></div>
+<div class="card"><h2>Bağlanması Gereken</h2><span id="due">0</span></div>
+</section>
+
+<section class="panel">
+<h2>Araç Ekle</h2>
+<form id="vehicleForm">
+<input required id="model" placeholder="Model">
+<input required id="vin" placeholder="Şase No">
+<select id="fuel">
+<option>Benzin</option>
+<option>Dizel</option>
+<option>Plug-in Hybrid</option>
+<option>Elektrikli</option>
+</select>
+<select id="status">
+<option>Stok</option>
+<option>Konsinye</option>
+</select>
+<button>Kaydet</button>
+</form>
+</section>
+
+<section class="panel">
+<h2>Araçlar</h2>
+<table>
+<thead><tr><th>Model</th><th>Şase</th><th>Yakıt</th><th>Durum</th></tr></thead>
+<tbody id="list"></tbody>
+</table>
+</section>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
